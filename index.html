@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="App.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>TIC-TAC-TOE</title>
+</head>
+<body>
+    <main class="main">
+
+        <div class="header">
+        <img class="logo" src="img/tic-tac-toe.png" alt="" />
+        <h1>TIC-TAC-TOE</h1>
+        </div>
+
+    
+        <section class="menu" id="menu">
+            <div class="submenu main-menu">
+                <button class="btn single-player" >single player (vs CPU)</button>
+                <button class="btn multi-player" >multiplayer</button>
+                <button class="btn about" >about</button>
+            </div>
+            <div class="submenu single-player-menu">
+                <h4 class="play-as">play as : </h4>
+                <button class="btn single-btn x-single">x</button>
+                <button class="btn single-btn o-single">o</button>
+                <hr id="line" />
+                <button class="btn home">home</button>
+            </div>
+            <div class="submenu multi-player-menu">
+                <h4 class="play-as">player1 : </h4>
+                <div class="choices">
+                    <button class="btn multi-btn x-multi">x</button>
+                    <button class="btn multi-btn o-multi">o</button>
+                </div>
+                <h5 class="note">(player2 will be selected automatically)</h5>
+                <button class="btn home">home</button>
+            </div>
+            <div class="about-section">
+                <p class="about-info"> a simple TIC-TAC-TOE game made using Vanilla JS, CSS and HTML.</p>
+                <button class="btn home">Home</button>
+            </div>
+            
+            
+        </section>
+    
+
+    
+        <section class="board-wrapper singlePlayerBoard">
+            <div class="scell" ></div>
+            <div class="scell" ></div>
+            <div class="scell" ></div>
+            <div class="scell"></div>
+            <div class="scell" ></div>
+            <div class="scell" ></div>
+            <div class="scell" ></div>
+            <div class="scell" ></div>
+            <div class="scell" ></div>
+        </section>
+        <section class="board-wrapper multiPlayerBoard">
+            <div class="mcell" ></div>
+            <div class="mcell" ></div>
+            <div class="mcell" ></div>
+            <div class="mcell"></div>
+            <div class="mcell" ></div>
+            <div class="mcell" ></div>
+            <div class="mcell" ></div>
+            <div class="mcell" ></div>
+            <div class="mcell" ></div>
+        </section>
+
+        <div class="result">
+            <h1> player Won!</h1>
+        </div>
+
+  </main>
+
+  <script src="./App.js"></script>
+</body>
+</html>
