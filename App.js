@@ -246,6 +246,8 @@ multiPlayerBtn.addEventListener("click", () => {
 
 for (let i = 0; i < m_cells.length; i++) {
   m_cells[i].addEventListener("click", (event) => {
+
+
     if (event.target.innerHTML === "") {
       event.target.innerHTML = player;
       checkWinner(m_cells);
@@ -274,6 +276,33 @@ for (let i = 0; i < m_cells.length; i++) {
     else {
       alert("cell is already taken!")
     }
+
+    let full = true;
+    for (let j = 0; j < m_cells.length; j++) {
+      const element = m_cells[j];
+      if (element.innerHTML === "") {
+        full = false;
+      }
+    }
+    if (full) {
+      if (winner === "") {
+        clearMultiPlayerBoard();
+
+        document.querySelector(".multiPlayerBoard").style.display = "none";
+        document.querySelector(".result").style.display = "flex";
+        document.querySelector(".result").innerHTML = `<h1>DRAW!</h1>`
+        winner = "";
+        setTimeout(() => {
+
+          document.querySelector(".result").style.display = "none";
+          document.getElementById("menu").style.display = "";
+          document.querySelector(".main-menu").style.display = "initial";
+          document.querySelector(".multi-player-menu").style.display = "none";
+
+        }, 1500);
+      }
+    }
+
   })
 }
 
